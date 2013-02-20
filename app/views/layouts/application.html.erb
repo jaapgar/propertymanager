@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Propertymanager</title>
+  <%= stylesheet_link_tag    "application", :media => "all" %>
+  <%= javascript_include_tag "application" %>
+  <%= csrf_meta_tags %>
+</head>
+<body>
+<div id="wrapper" class="twelve columns">
+	
+	<div class="row">
+	<div id="login" class="twelve columns">
+		<% if current_user %>
+			<h6><%= link_to "Edit Profile", edit_user_path(:current) %></h6>
+			<h6><%= link_to "Logout", logout_path %></h6>
+		<% else %>
+			<h6><%= link_to "Register", new_user_path %></h6>
+			<h6><%= link_to "Login", login_path %></h6>	
+		<% end %>
+	</div>
+	</div>
+	
+	<div class="row">
+	<div id="header" class="twelve columns">
+		<h1>This is the Header!</h1>
+	</div>
+	
+	</div>
+	
+	<div class="row">
+	<div id="nav" class="twelve columns">
+		<h4>This is the navigation!</h4>
+	</div>	
+	</div>
+	
+	<div class="row">
+	<div id="main" class="nine columns">
+		<%= yield %>
+	</div>
+	<div id="side" class="three columns">
+		<h5>This is the Sidebar!</h5>
+	</div>
+	</div>
+	
+	<div class="row">
+	<div id="footer" class="twelve columns">
+		<h2>This is the Footer!</h2>
+	</div>	
+	</div>
+</div>
+
+</body>
+</html>
