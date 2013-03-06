@@ -1,4 +1,7 @@
 Propertymanager::Application.routes.draw do
+  resources :roles
+
+
   resources :user_sessions
 
 
