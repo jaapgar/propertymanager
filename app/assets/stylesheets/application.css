@@ -12,26 +12,39 @@
  *= require foundation_and_overrides
  *= require_tree .
  */
+
 #header {
-	background-color: red;
+	border: black thin solid;
+	padding: 0px;
+	margin: 0px;
 }
 
 #nav {
-	background-color: orange;
+	border: black thin solid;
+	padding: 0px;
+	margin: 0px;
 }
 
 #main {
-	background-color: yellow;
+	border: black thin solid;
+	padding: 0px;
+	margin: 0px;
 }
 
 #footer {
-	background-color: red;
+	border: black thin solid;
+	padding: 0px;
+	margin: 0px;
 }
 
 #side {
-	background-color: blue;
+	border: black thin solid;
+	padding: 0px;
+	margin: 0px;
 }
 
 #login {
 	display: inline;
+	padding: 0px;
+	margin: 0px;
 }

@@ -12,7 +12,7 @@
 	<div id="login" class=" row twelve columns top-bar">
 		<ul>
 		<% if current_user %>
-			<li class="name"><h6><%= link_to "Edit Profile", edit_user_path(:current) %></h6></li>
+			<li class="name"><h6><%= link_to "Edit Profile", edit_user_path(current_user) %></h6></li>
 			<li class="name"><h6><%= link_to "Logout", logout_path %></h6></li>
 		<% else %>
 			<li class="name"><h6><%= link_to "Register", new_user_path %></h6></li>
@@ -34,8 +34,8 @@
 		</ul>
 	</div>	
 		
-	<div class="row">
-	<div id="main" class="nine columns">
+	<div class="row twelve columns">
+	<div id="main" class="eight columns">
 		 <% if flash[:error] %>
 	        <div id='error'><h2><%=h flash[:error] %></h2></div>
 		<% end %>
