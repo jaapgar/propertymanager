@@ -2,8 +2,12 @@ class RepairRequestsController < ApplicationController
   # GET /repair_requests
   # GET /repair_requests.json
   def index
-    @repair_requests = RepairRequest.all
-
+    if current_user.has_role? :manager
+      @repair_requests = RepairRequest.all
+    else
+      @repair_requests = RepairRequest.where(:submitter_id => current_user)
+    end
+    
     respond_to do |format|
       format.html # index.html.erb
       format.json { render json: @repair_requests }

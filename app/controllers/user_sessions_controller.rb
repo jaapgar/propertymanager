@@ -1,7 +1,4 @@
 class UserSessionsController < ApplicationController
-  # GET /user_sessions
-  # GET /user_sessions.json
-  
   # GET /user_sessions/new
   # GET /user_sessions/new.json
   def new

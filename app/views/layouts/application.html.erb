@@ -27,7 +27,7 @@
 	
 	<div id="nav" class="row twelve columns">
 		<ul class="nav-bar">
-			<% if can? :manage, :all %>
+			<% if current_user %>
 			<li class="active"><%= link_to "Repair Requests", repair_requests_path %></li>
 			<li class="active"><%= link_to "Leases", leases_path %></li>
 			<% end %>
@@ -36,6 +36,10 @@
 		
 	<div class="row">
 	<div id="main" class="nine columns">
+		 <% if flash[:error] %>
+	        <div id='error'><h2><%=h flash[:error] %></h2></div>
+		<% end %>
+			    
 		<%= yield %>
 	</div>
 	<div id="side" class="three columns">
